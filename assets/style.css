@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,700&display=swap');
+
+*{
+    font-family: 'Nurito' sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    font-size: 25px;
+    color: #333;
+}
+
+header .navbar a{
+    font-size: 20px;
+    color: #666;
+    margin-left: 20px;
+}
+
+header .navbar a:hover{
+    color: #999;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 9%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .content{
+    flex: 1 1 400px;
+}
+
+.container .image{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    left: 25rem;
+}
+.container .image .shoes{
+    width: 100%;
+    object-fit: cover;
+}
+.slick-list.draggable{
+    width: 20rem;
+}
+.container .image .shoes.active{
+    display: initial;
+    animation: animate .5s cubic-bezier(.45,1.63,.98,1.55);
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg) scale(.7);
+    }
+}
+.container .content h3{
+    color: #333;
+    font-size: 50px;
+}
+
+.container .content p{
+    color: #666;
+    font-size: 17px;
+    padding: 5px 0;
+}
+
+.container .content .btn{
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 17px;
+    padding: 9px 40px;
+    background-color: #333;
+    color: #fff;
+}
+
+.container .content .btn:hover{
+    background: #333;
+}
